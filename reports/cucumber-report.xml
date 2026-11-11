@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="3.513" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-11-11T13:24:18.400Z">
+  <testcase classname="Validate data bundle purchases" name="Validate a data bundle purchase - Accepted - #1.1" time="0.555">
+    <system-out><![CDATA[Given I create an API wallet with R500.00...................................passed
+And the API wallet has already purchased 0 data bundles today...............passed
+When I submit an API purchase for "1GB" to "0821234567".....................passed
+Then the API purchase should be "Accepted"..................................passed
+And the API should return the message "1GB data bundle purchased"...........passed]]></system-out>
+  </testcase>
+  <testcase classname="Validate data bundle purchases" name="Validate a data bundle purchase - Accepted - #1.2" time="0.096">
+    <system-out><![CDATA[Given I create an API wallet with R500.00...................................passed
+And the API wallet has already purchased 1 data bundles today...............passed
+When I submit an API purchase for "2GB" to "0712345678".....................passed
+Then the API purchase should be "Accepted"..................................passed
+And the API should return the message "2GB data bundle purchased"...........passed]]></system-out>
+  </testcase>
+  <testcase classname="Validate data bundle purchases" name="Validate a data bundle purchase - Accepted - #1.3" time="0.098">
+    <system-out><![CDATA[Given I create an API wallet with R500.00...................................passed
+And the API wallet has already purchased 2 data bundles today...............passed
+When I submit an API purchase for "2GB" to "0712345678".....................passed
+Then the API purchase should be "Accepted"..................................passed
+And the API should return the message "2GB data bundle purchased"...........passed]]></system-out>
+  </testcase>
+  <testcase classname="Validate data bundle purchases" name="Validate a data bundle purchase - Rejected - #2.1" time="0.085">
+    <system-out><![CDATA[Given I create an API wallet with R500.00...................................passed
+And the API wallet has already purchased 0 data bundles today...............passed
+When I submit an API purchase for "1GB" to "082123456"......................passed
+Then the API purchase should be "Rejected"..................................passed
+And the API should return the message "Enter a valid SA mobile number"......passed]]></system-out>
+  </testcase>
+  <testcase classname="Validate data bundle purchases" name="Validate a data bundle purchase - Rejected - #2.2" time="0.094">
+    <system-out><![CDATA[Given I create an API wallet with R500.00...................................passed
+And the API wallet has already purchased 0 data bundles today...............passed
+When I submit an API purchase for "1GB" to "08212345678"....................passed
+Then the API purchase should be "Rejected"..................................passed
+And the API should return the message "Enter a valid SA mobile number"......passed]]></system-out>
+  </testcase>
+  <testcase classname="Validate data bundle purchases" name="Validate a data bundle purchase - Rejected - #2.3" time="0.213">
+    <system-out><![CDATA[Given I create an API wallet with R500.00...................................passed
+And the API wallet has already purchased 0 data bundles today...............passed
+When I submit an API purchase for "" to "0821234567"........................passed
+Then the API purchase should be "Rejected"..................................passed
+And the API should return the message "Choose a data bundle"................passed]]></system-out>
+  </testcase>
+  <testcase classname="Validate data bundle purchases" name="Validate a data bundle purchase - Rejected - #2.4" time="0.125">
+    <system-out><![CDATA[Given I create an API wallet with R500.00...................................passed
+And the API wallet has already purchased 3 data bundles today...............passed
+When I submit an API purchase for "1GB" to "0821234567".....................passed
+Then the API purchase should be "Rejected"..................................passed
+And the API should return the message "You can buy up to 3 data bundles a day"..passed]]></system-out>
+  </testcase>
+  <testcase classname="Validate data bundle purchases" name="Validate a data bundle purchase - Rejected - #2.5" time="0.082">
+    <system-out><![CDATA[Given I create an API wallet with R100.00...................................passed
+And the API wallet has already purchased 0 data bundles today...............passed
+When I submit an API purchase for "10GB" to "0821234567"....................passed
+Then the API purchase should be "Rejected"..................................passed
+And the API should return the message "Not enough funds in your Flash wallet"..passed]]></system-out>
+  </testcase>
+  <testcase classname="Validate data bundle purchases" name="Validate a data bundle purchase - Rejected - #2.6" time="0.086">
+    <system-out><![CDATA[Given I create an API wallet with R500.00...................................passed
+And the API wallet has already purchased 0 data bundles today...............passed
+When I submit an API purchase for "1GB" to "+27821234567"...................passed
+Then the API purchase should be "Rejected"..................................passed
+And the API should return the message "Enter a valid SA mobile number"......passed]]></system-out>
+  </testcase>
+  <testcase classname="Validate data bundle purchases" name="Validate a data bundle purchase - Rejected - #2.7" time="0.084">
+    <system-out><![CDATA[Given I create an API wallet with R500.00...................................passed
+And the API wallet has already purchased 0 data bundles today...............passed
+When I submit an API purchase for "1GB" to "082 123 4567"...................passed
+Then the API purchase should be "Rejected"..................................passed
+And the API should return the message "Enter a valid SA mobile number"......passed]]></system-out>
+  </testcase>
+  <testcase classname="Purchasing mobile data bundles" name="Successfully purchase a data bundle - #1.1" time="0.426">
+    <system-out><![CDATA[Given I have R500.00 in my wallet...........................................passed
+When I purchase the "1GB" data bundle for "0821234567"......................passed
+Then my data bundle purchase should be successful...........................passed
+And I should see the purchase reference.....................................passed
+And my wallet balance should be R401.00.....................................passed
+And the purchase should be recorded for "0821234567" in the API.............passed]]></system-out>
+  </testcase>
+  <testcase classname="Purchasing mobile data bundles" name="Purchase two data bundles in one visit" time="0.49">
+    <system-out><![CDATA[Given I have R500.00 in my wallet...........................................passed
+When I purchase the following data bundles:.................................passed
+Then both data bundle purchases should be successful........................passed
+And each purchase should have a reference...................................passed
+And my wallet balance should be R252.00.....................................passed
+And both purchases should be recorded in the API............................passed]]></system-out>
+  </testcase>
+  <testcase classname="Purchasing mobile data bundles" name="Reach the daily purchase limit" time="0.249">
+    <system-out><![CDATA[Given I have R500.00 in my wallet...........................................passed
+And I have already purchased 3 data bundles today...........................passed
+When I attempt to purchase the "1GB" data bundle for "0821234567"...........passed
+Then my purchase should be rejected.........................................passed
+And I should be told "You can buy up to 3 data bundles a day"...............passed
+And the API should reject the purchase......................................passed
+And my wallet balance should remain R335.00.................................passed]]></system-out>
+  </testcase>
+</testsuite>

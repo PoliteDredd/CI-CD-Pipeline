@@ -1,0 +1,1422 @@
+[
+  {
+    "description": "As a customer\nI want my data bundle purchase details to be validated\nSo that invalid purchases are rejected with the correct message",
+    "elements": [
+      {
+        "description": "",
+        "id": "validate-data-bundle-purchases;validate-a-data-bundle-purchase",
+        "keyword": "Scenario Outline",
+        "line": 18,
+        "name": "Validate a data bundle purchase",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 498858600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I create an API wallet with R500.00",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22038199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the API wallet has already purchased 0 data bundles today",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 265199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I submit an API purchase for \"1GB\" to \"0821234567\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10215100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the API purchase should be \"Accepted\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2702999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the API should return the message \"1GB data bundle purchased\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1588699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 15883200
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeatureValidateBundle",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 15
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validate-data-bundle-purchases;validate-a-data-bundle-purchase",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Validate a data bundle purchase",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 64328399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I create an API wallet with R500.00",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4703400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the API wallet has already purchased 1 data bundles today",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8706099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I submit an API purchase for \"2GB\" to \"0712345678\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8459700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the API purchase should be \"Accepted\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 793400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the API should return the message \"2GB data bundle purchased\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 705800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6676299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeatureValidateBundle",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 15
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validate-data-bundle-purchases;validate-a-data-bundle-purchase",
+        "keyword": "Scenario Outline",
+        "line": 20,
+        "name": "Validate a data bundle purchase",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 65592499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I create an API wallet with R500.00",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5317199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the API wallet has already purchased 2 data bundles today",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9705699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I submit an API purchase for \"2GB\" to \"0712345678\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7482899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the API purchase should be \"Accepted\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 726899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the API should return the message \"2GB data bundle purchased\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 678700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6579900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeatureValidateBundle",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 15
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validate-data-bundle-purchases;validate-a-data-bundle-purchase",
+        "keyword": "Scenario Outline",
+        "line": 25,
+        "name": "Validate a data bundle purchase",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 65028299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I create an API wallet with R500.00",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3422999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the API wallet has already purchased 0 data bundles today",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I submit an API purchase for \"1GB\" to \"082123456\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6654300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the API purchase should be \"Rejected\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 655699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the API should return the message \"Enter a valid SA mobile number\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 675000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6624600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeatureValidateBundle",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validate-data-bundle-purchases;validate-a-data-bundle-purchase",
+        "keyword": "Scenario Outline",
+        "line": 26,
+        "name": "Validate a data bundle purchase",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 66082900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I create an API wallet with R500.00",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2984500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the API wallet has already purchased 0 data bundles today",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 186899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I submit an API purchase for \"1GB\" to \"08212345678\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6468499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the API purchase should be \"Rejected\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 688699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the API should return the message \"Enter a valid SA mobile number\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 606900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14307899
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeatureValidateBundle",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validate-data-bundle-purchases;validate-a-data-bundle-purchase",
+        "keyword": "Scenario Outline",
+        "line": 27,
+        "name": "Validate a data bundle purchase",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 81430199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I create an API wallet with R500.00",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2725799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the API wallet has already purchased 0 data bundles today",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I submit an API purchase for \"\" to \"0821234567\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3192199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the API purchase should be \"Rejected\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 739499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the API should return the message \"Choose a data bundle\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 613399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 123599299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeatureValidateBundle",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validate-data-bundle-purchases;validate-a-data-bundle-purchase",
+        "keyword": "Scenario Outline",
+        "line": 28,
+        "name": "Validate a data bundle purchase",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 95362799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I create an API wallet with R500.00",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3717800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the API wallet has already purchased 3 data bundles today",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13482899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I submit an API purchase for \"1GB\" to \"0821234567\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5329200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the API purchase should be \"Rejected\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 517799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the API should return the message \"You can buy up to 3 data bundles a day\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 464299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5189500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeatureValidateBundle",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validate-data-bundle-purchases;validate-a-data-bundle-purchase",
+        "keyword": "Scenario Outline",
+        "line": 29,
+        "name": "Validate a data bundle purchase",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 64049699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I create an API wallet with R100.00",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2960399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the API wallet has already purchased 0 data bundles today",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I submit an API purchase for \"10GB\" to \"0821234567\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6242299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the API purchase should be \"Rejected\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 600400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the API should return the message \"Not enough funds in your Flash wallet\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 530899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6403100
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeatureValidateBundle",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validate-data-bundle-purchases;validate-a-data-bundle-purchase",
+        "keyword": "Scenario Outline",
+        "line": 30,
+        "name": "Validate a data bundle purchase",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 67672899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I create an API wallet with R500.00",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3596000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the API wallet has already purchased 0 data bundles today",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I submit an API purchase for \"1GB\" to \"+27821234567\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5229800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the API purchase should be \"Rejected\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 446299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the API should return the message \"Enter a valid SA mobile number\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 415899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7644699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeatureValidateBundle",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validate-data-bundle-purchases;validate-a-data-bundle-purchase",
+        "keyword": "Scenario Outline",
+        "line": 31,
+        "name": "Validate a data bundle purchase",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 65933399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I create an API wallet with R500.00",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4118100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the API wallet has already purchased 0 data bundles today",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 123700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I submit an API purchase for \"1GB\" to \"082 123 4567\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5086400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the API purchase should be \"Rejected\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 766099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the API should return the message \"Enter a valid SA mobile number\"",
+            "match": {
+              "location": "features\\step_definitions\\data-bundle-api.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 546000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5523799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeatureValidateBundle",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "validate-data-bundle-purchases",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Validate data bundle purchases",
+    "tags": [
+      {
+        "name": "@FeatureValidateBundle",
+        "line": 1
+      }
+    ],
+    "uri": "features\\data-bundle-rules.feature"
+  },
+  {
+    "description": "As a customer\nI want to buy mobile data bundles using my wallet\nSo that I can purchase data and see my remaining balance",
+    "elements": [
+      {
+        "description": "",
+        "id": "purchasing-mobile-data-bundles;successfully-purchase-a-data-bundle",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Successfully purchase a data bundle",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 65453599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I have R500.00 in my wallet",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 209665799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I purchase the \"1GB\" data bundle for \"0821234567\"",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113674299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "my data bundle purchase should be successful",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4037599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I should see the purchase reference",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4271899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "my wallet balance should be R401.00",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5626199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the purchase should be recorded for \"0821234567\" in the API",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2869300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 19345000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeartureMobileDataBundles",
+            "line": 1
+          },
+          {
+            "name": "@SuccessfullyPurchase",
+            "line": 8
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "purchasing-mobile-data-bundles;purchase-two-data-bundles-in-one-visit",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Purchase two data bundles in one visit",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 195365300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I have R500.00 in my wallet",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 118636900
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "mobileNumber",
+                      "bundle"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "0821234567",
+                      "1GB"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "0831234567",
+                      "2GB"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I purchase the following data bundles:",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 148580200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "both data bundle purchases should be successful",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3228000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "each purchase should have a reference",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3703000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "my wallet balance should be R252.00",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5538799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "both purchases should be recorded in the API",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3298099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9879000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeartureMobileDataBundles",
+            "line": 1
+          },
+          {
+            "name": "@BundlesInVisit",
+            "line": 21
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "purchasing-mobile-data-bundles;reach-the-daily-purchase-limit",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "Reach the daily purchase limit",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 66650200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 36,
+            "name": "I have R500.00 in my wallet",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78079200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I have already purchased 3 data bundles today",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11675199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I attempt to purchase the \"1GB\" data bundle for \"0821234567\"",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63411199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "my purchase should be rejected",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10622999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I should be told \"You can buy up to 3 data bundles a day\"",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:86"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4416499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "the API should reject the purchase",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2744700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "my wallet balance should remain R335.00",
+            "match": {
+              "location": "features\\step_definitions\\buy-data-bundle.steps.ts:96"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3183799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6280200
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FeartureMobileDataBundles",
+            "line": 1
+          },
+          {
+            "name": "@PurchaseLimit",
+            "line": 34
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "purchasing-mobile-data-bundles",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Purchasing mobile data bundles",
+    "tags": [
+      {
+        "name": "@FeartureMobileDataBundles",
+        "line": 1
+      }
+    ],
+    "uri": "features\\data-bundle.feature"
+  }
+]

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Flash Wallet — Buy data (demo)</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0d110e; color: #e6ede4; max-width: 440px; margin: 48px auto; }
+    label { display: block; margin-top: 16px; }
+    input, select { width: 100%; padding: 8px; font-size: 16px; box-sizing: border-box; }
+    button { margin-top: 20px; padding: 10px 16px; background: #1dfa0f; border: 0; font-weight: 700; }
+    [data-result="error"] { color: #ff8a8a; }
+    [data-result="success"] { color: #1dfa0f; }
+  </style>
+</head>
+<body>
+  <h1>Buy data</h1>
+  <p>Wallet balance: <strong data-testid="wallet-balance">…</strong></p>
+  <form id="bundle-form">
+    <label for="mobile">Mobile number</label>
+    <input id="mobile" name="mobile" inputmode="tel">
+    <label for="bundle">Data bundle</label>
+    <select id="bundle" name="bundle"><option value="">Choose a bundle</option></select>
+    <button type="submit">Buy data</button>
+  </form>
+  <p data-testid="purchase-message" role="status"></p>
+  <p data-testid="purchase-reference"></p>
+  <script>
+    // The page talks to the API; the account id comes from ?account=F-0001
+    const accountId = new URLSearchParams(location.search).get('account');
+    const balanceEl = document.querySelector('[data-testid="wallet-balance"]');
+    const messageEl = document.querySelector('[data-testid="purchase-message"]');
+    const referenceEl = document.querySelector('[data-testid="purchase-reference"]');
+    const bundleEl = document.getElementById('bundle');
+
+    async function loadBundles() {
+      try {
+        const bundles = await (await fetch('/api/bundles')).json();
+        for (const b of bundles) bundleEl.add(new Option(`${b.name} for ${b.price}`, b.code));
+      } catch { /* the select keeps only "Choose a bundle" */ }
+    }
+
+    async function loadBalance() {
+      try {
+        const response = await fetch(`/api/accounts/${accountId}`);
+        if (!response.ok) throw new Error(String(response.status));
+        balanceEl.textContent = (await response.json()).balance;
+      } catch {
+        balanceEl.textContent = 'Unavailable';
+      }
+    }
+
+    document.getElementById('bundle-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      referenceEl.textContent = '';
+      try {
+        const response = await fetch(`/api/accounts/${accountId}/bundles`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ mobileNumber: document.getElementById('mobile').value.trim(), bundleCode: bundleEl.value }),
+        });
+        if (response.status >= 500) throw new Error(String(response.status));
+        const body = await response.json();
+        messageEl.dataset.result = body.result;
+        messageEl.textContent = body.message;
+        balanceEl.textContent = body.balance;
+        if (body.reference) referenceEl.textContent = `Reference: ${body.reference}`;
+      } catch {
+        messageEl.dataset.result = 'error';
+        messageEl.textContent = "We couldn't complete your purchase. Please try again.";
+      }
+    });
+
+    loadBundles();
+    loadBalance();
+  </script>
+</body>
+</html>
