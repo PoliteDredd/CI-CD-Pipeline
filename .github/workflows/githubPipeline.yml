@@ -1,0 +1,57 @@
+# GitHub Actions: run the Cucumber data-bundle tests automatically.
+name: data tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '0 3 * * *' # 05:00 SAST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Run Cucumber tests
+        id: cucumber
+        run: npm test
+      - name: Upload Cucumber reports and failure traces
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-reports
+          path: reports/
+          if-no-files-found: warn
+      - name: Submit results to Testmo
+        if: always() && steps.cucumber.outcome != 'skipped'
+        env:
+          TESTMO_URL: ${{ secrets.TESTMO_URL }}
+          TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
+        run: |
+          if [ -z "$TESTMO_URL" ] || [ -z "$TESTMO_TOKEN" ]; then
+            echo "Skipping Testmo submission because TESTMO_URL or TESTMO_TOKEN is not configured."
+            exit 0
+          fi
+          if [ ! -f reports/cucumber-report.xml ]; then
+            echo "Skipping Testmo submission because the Cucumber JUnit report was not generated."
+            exit 0
+          fi
+          npm install --no-save @testmo/testmo-cli
+          npx testmo automation:run:submit \
+            --instance "$TESTMO_URL" \
+            --project-id 1 \
+            --name "Wallet tests" \
+            --source "cucumber" \
+            --results reports/cucumber-report.xml

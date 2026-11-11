@@ -18,6 +18,7 @@ export class DataBundleWorld extends World {
 
   purchaseReference!: string;
   purchaseReferences: string[] = [];
+  traceStarted = false;
 
   constructor(options: IWorldOptions) {
     super(options);
